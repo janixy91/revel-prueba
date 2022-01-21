@@ -1,0 +1,51 @@
+$button-height: 48px;
+$button-height-large: 56px;
+$button-min-width: 200px;
+$button-min-width-large: 300px;
+$button-color: $color-black;
+$button-font-size: 16px;
+$button-border-radius: $border-radius-02;
+$button-border-secondary: $border-black;
+$button-background: $color-primary;
+$button-background-secondary: $color-white;
+$button-background-hover: $color-white;
+$button-padding: 0 10px;
+
+.button {
+  @extend .hover-basic;
+
+  border: none;
+  border-radius: $button-border-radius;
+  color: $button-color;
+  display: inline-block;
+  font-size: $button-font-size;
+  height: $button-height;
+  min-width: $button-min-width;
+  padding: $button-padding;
+  position: relative;
+  text-transform: uppercase;
+
+  &:hover {
+    background: $button-background-hover;
+  }
+}
+
+.button--primary {
+  background: $button-background;
+}
+
+.button--secondary {
+  background: $button-background-secondary;
+  border: $button-border-secondary;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+@media #{$breakpoints-large} {
+  .button {
+    height: $button-height-large;
+    min-width: $button-min-width-large;
+  }
+}

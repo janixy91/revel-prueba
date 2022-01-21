@@ -1,0 +1,12 @@
+$title-color: $color-white;
+$title-color-black: $color-black;
+$title-foint-size: 32px;
+
+.title {
+  color: $title-color;
+  font-size: $title-foint-size;
+}
+
+.title--black {
+  color: $title-color-black;
+}

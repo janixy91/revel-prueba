@@ -1,0 +1,11 @@
+@import "globals.scss";
+@import "colors.scss";
+@import "borders.scss";
+
+@import "grid.scss";
+@import "shadows.scss";
+@import "breakpoints.scss";
+@import "modules/index.scss";
+html {
+  scroll-behavior: smooth;
+}

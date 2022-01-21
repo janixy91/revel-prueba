@@ -1,0 +1,92 @@
+$banner-default-height-large: 745px;
+$banner-default-height: 616px;
+$banner-default-border-radius: 0 0 $border-radius-03 $border-radius-03;
+$banner-default-border-radius-large: 0 0 $border-radius-04 $border-radius-04;
+$banner-default-background: $color-black;
+$banner-default-images-separator: 32.5px;
+$banner-default-content-separator-top: 106px;
+$banner-default-content-separator-top-large: 233px;
+$banner-default-title-max-width: 424px;
+$banner-default-title-fontsize-large: 64px;
+$banner-default-description-color: $color-lightgray;
+$banner-default-description-lineheight: 19px;
+$banner-default-description-maxwidth: 350px;
+$banner-default-description-separator-top-large: 26px;
+$banner-default-description-separator-top: 17.5px;
+$banner-default-description-separator-bottom-large: 39px;
+$banner-default-description-separator-bottom: 32px;
+
+.banner-default {
+  background: $banner-default-background;
+  border-radius: $banner-default-border-radius;
+  height: $banner-default-height;
+}
+
+.banner-default__content {
+  @extend .grid;
+
+  display: flex;
+  flex-direction: column;
+  padding-top: $banner-default-content-separator-top;
+}
+
+.banner-default__top {
+  text-align: center;
+}
+
+.banner-default__title {
+  max-width: 100%;
+}
+
+.banner-default__description {
+  color: $banner-default-description-color;
+  line-height: $banner-default-description-lineheight;
+  margin-top: $banner-default-description-separator-top;
+  margin-bottom: $banner-default-description-separator-bottom;
+  max-width: 100%;
+}
+
+.banner-default__bottom {
+  flex: 0 0 auto;
+  position: relative;
+
+  margin-top: calc(
+    #{$banner-default-images-separator} + #{$image-double-separator-top}
+  );
+}
+
+@media #{$breakpoints-large} {
+  .banner-default {
+    border-radius: $banner-default-border-radius-large;
+    height: $banner-default-height-large;
+  }
+
+  .banner-default__content {
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding-top: $banner-default-content-separator-top-large;
+  }
+
+  .banner-default__top {
+    text-align: left;
+  }
+
+  .banner-default__title {
+    max-width: $banner-default-title-max-width;
+
+    .title {
+      font-size: $banner-default-title-fontsize-large;
+    }
+  }
+
+  .banner-default__description {
+    margin-bottom: $banner-default-description-separator-bottom-large;
+    margin-top: $banner-default-description-separator-top-large;
+    max-width: $banner-default-description-maxwidth;
+  }
+
+  .banner-default__bottom {
+    margin-top: 0;
+  }
+}

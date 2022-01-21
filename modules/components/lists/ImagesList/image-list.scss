@@ -1,0 +1,22 @@
+$image-list-item-gap-large: 16px;
+$image-list-item-separator-botton: 24px;
+$image-list-item-separator-botton-large: 31px;
+
+.image-list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: $image-list-item-separator-botton $image-list-item-gap-large;
+}
+
+@media #{$breakpoints-tablet} {
+  .image-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media #{$breakpoints-large} {
+  .image-list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: $image-list-item-separator-botton-large $image-list-item-gap-large;
+  }
+}

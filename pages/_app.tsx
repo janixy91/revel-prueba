@@ -1,8 +1,15 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/index.scss";
+import type { AppProps } from "next/app";
+import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      document.documentElement.dataset.scroll = window.scrollY.toString();
+    });
+  });
+
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default MyApp;

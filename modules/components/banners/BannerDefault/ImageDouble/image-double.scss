@@ -1,0 +1,42 @@
+$image-double-border: $border-light;
+$image-double-separator-top: 15.5px;
+$image-double-separator-top-large: 26px;
+$image-double-separator-right: 17.5px;
+$image-double-separator-right-large: 51.29px;
+
+.banner-default__image-wrap {
+  text-align: center;
+}
+
+.banner-default__image {
+  border: $image-double-border;
+}
+
+.banner-default__image--fill {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.banner-default__image--empty {
+  position: absolute;
+  top: -#{$image-double-separator-top};
+  left: 50%;
+  transform: translateX(calc(-50% + #{$image-double-separator-right}));
+}
+
+@media #{$breakpoints-large} {
+  .banner-default__image--empty {
+    position: relative;
+    top: 0;
+    left: initial;
+    transform: initial;
+  }
+
+  .banner-default__image--fill {
+    position: absolute;
+    top: #{$image-double-separator-top-large};
+    transform: translateX(calc(-50% - #{$image-double-separator-right-large}));
+  }
+}

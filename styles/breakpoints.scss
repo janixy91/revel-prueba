@@ -1,0 +1,5 @@
+$size-tablet: 640px;
+$size-large: 1024px;
+
+$breakpoints-tablet: "only screen and (min-width: #{$size-tablet})";
+$breakpoints-large: "only screen and (min-width: #{$size-large})";

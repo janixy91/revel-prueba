@@ -1,0 +1,13 @@
+$count-background: $color-black-02;
+$count-color: $color-white;
+$count-padding: 7.86px 15.13px;
+$count-font-size: 24px;
+$count-border-radius: $border-radius-05;
+
+.count {
+  background: rgba($count-background, 0.8);
+  border-radius: $count-border-radius;
+  color: $count-color;
+  font-size: $count-font-size;
+  padding: $count-padding;
+}

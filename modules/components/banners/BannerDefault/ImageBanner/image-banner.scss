@@ -1,0 +1,28 @@
+$image-banner-border-size-large: 52px;
+$image-banner-border-size: 32.7px;
+$image-banner-border-color: $color-white;
+$image-banner-border: $image-banner-border-size solid $image-banner-border-color;
+$image-banner-shadow: $shadow-01;
+$image-banner-size: 191.25px;
+$image-banner-size-large: 315.44px;
+
+.image-banner {
+  border: $image-banner-border;
+  box-shadow: $image-banner-shadow;
+  background-color: $image-banner-border-color;
+
+  height: $image-banner-size;
+  width: $image-banner-size;
+
+  position: relative;
+  box-sizing: content-box;
+}
+
+@media #{$breakpoints-large} {
+  .image-banner {
+    border-width: $image-banner-border-size-large;
+
+    height: $image-banner-size-large;
+    width: $image-banner-size-large;
+  }
+}

@@ -1,0 +1,39 @@
+$input-search-height: 48px;
+$input-search-icon-size: 21.71px;
+$input-search-padding-horizontal: 21.96px;
+$input-search-padding-vertical: 15.11px;
+$input-search-color: $color-midgray;
+
+.input-search {
+  position: relative;
+
+  input {
+    border: $border-default;
+    border-radius: $border-radius-02;
+    height: $input-search-height;
+    padding: $input-search-padding-vertical
+      calc(
+        #{$input-search-padding-horizontal} + #{$input-search-padding-horizontal}
+      )
+      $input-search-padding-vertical $input-search-padding-horizontal;
+    width: 100%;
+
+    &::placeholder {
+      color: $input-search-color;
+    }
+  }
+}
+
+.input-search__icon {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: $input-search-padding-horizontal;
+}
+
+.input-search__icon-container {
+  height: $input-search-icon-size;
+  width: $input-search-icon-size;
+
+  position: relative;
+}
